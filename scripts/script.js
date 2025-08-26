@@ -19,25 +19,3 @@ const loginClick = document
     }
   });
 
-// Main buttons function
-
-// const addMoneyBtn = document.getElementById("addMoneyBtn").addEventListener("click", function () {
-//   alert('hi')
-//  });
-// const cashOutBtn = document.getElementById("cashOutBtn");
-// const transferMoneyBtn = document.getElementById("transferMoneyBtn");
-// const GetBonusBtn = document.getElementById("GetBonusBtn");
-// const payBillBtn = document.getElementById("payBillBtn");
-// const TransactionBtn = document.getElementById("TransactionBtn");
-
-// const latestPayS = document.getElementById("latestPayS");
-// const addMoneyS = document.getElementById("addMoneyS");
-// const cashOutS = document.getElementById("cashOutS");
-// const transferMoneyS = document.getElementById("transferMoneyS");
-// const GetBonusS = document.getElementById("GetBonusS");
-// const payBillS = document.getElementById("payBillS");
-// const TransactionS = document.getElementById("TransactionS");
-
-
-
-// console.log("hie")

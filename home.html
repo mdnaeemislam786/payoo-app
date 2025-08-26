@@ -32,7 +32,7 @@
           <div class="flex items-center">
             <img class="h-[40px]" src="./assets/Group.png" alt="" />
             <div class="ml-1">
-              <h1 class="font-bold">$4000</h1>
+              <h1 class="font-bold">$<span id="current-balance">4000</span></h1>
               <p class="text-gray-500 text-sm">Available Balance</p>
             </div>
           </div>
@@ -194,21 +194,18 @@
         <form class="bg-white rounded-2xl mt-2 m-3 p-5">
           <div>
             <label for="selectBank" class="font-semibold">Select A Bank</label>
-            <select
-              class="select w-full rounded-2xl border-0 h-10 text-gray-400 bg-gray-100 my-3"
-              id="selectBank"
-            >
-              <option value="">Select Bank</option>
-              <option value="">Rupali Bank</option>
-              <option value="">Grammin Bank</option>
-              <option value="">Janota Bank</option>
+            <select class="select w-full rounded-2xl border-0 h-10 text-gray-400 bg-gray-100 my-3" id="selectBank" required>
+              <option value="0">Select Bank</option>
+              <option value="1">Rupali Bank</option>
+              <option value="2">Grammin Bank</option>
+              <option value="3">Janota Bank</option>
             </select>
           </div>
           <div>
             <label class="font-semibold" for="AccNumber"
               >Bank Account Number</label
             ><br />
-            <input
+            <input required
               class="w-full rounded-2xl border-0 text-gray-400 bg-gray-100 my-3 h-10 pl-4"
               type="text"
               id="AccNumber"
@@ -216,26 +213,27 @@
             />
           </div>
           <div>
-            <label class="font-semibold" for="AccNumber">Amount to Add</label
+            <label class="font-semibold" for="addAmount">Amount to Add</label
             ><br />
             <input
               class="w-full rounded-2xl border-0 text-gray-400 bg-gray-100 my-3 h-10 pl-4"
               type="text"
-              id="AccNumber"
+              id="addAmount"
               placeholder="Add Amount to withdraw"
             />
           </div>
           <div>
-            <label class="font-semibold" for="AccNumber">Pin Number</label
+            <label class="font-semibold" for="addPin">Pin Number</label
             ><br />
             <input
               class="w-full rounded-2xl border-0 text-gray-400 bg-gray-100 my-3 h-10 pl-4"
               type="text"
-              id="AccNumber"
+              id="addPin"
               placeholder="Enter 4 digit pin number"
             />
           </div>
-          <button
+          <small id="addAlart" class=" text-red-500 text-center hidden">your <span id="addAlartInfo"></span> information is wrong</small>
+          <button id="addMoney" type="button"
             class="btn bg-blue-500 rounded-3xl text-white mt-1 w-full h-10"
           >
             Add Money
@@ -508,6 +506,8 @@
       </section>
 
     </main>
+
+    <!-- all button action  -->
     <script>
       const latestPayS = document.getElementById("latestPayS");
       const addMoneyS = document.getElementById("addMoneyS");
@@ -572,5 +572,6 @@
         TransactionS.style.display = "flex";
       });
     </script>
+    <script src="./scripts/addMony.js"></script>
   </body>
 </html>
